@@ -1,8 +1,0 @@
-<div id="quotes"></div>
-
-<script type="text/javascript">
-  $(function() {
-    window.router = new BenchPrep.Routers.QuotesRouter({quotes: <%= @quotes.to_json.html_safe -%>});
-    Backbone.history.start();
-  });
-</script>

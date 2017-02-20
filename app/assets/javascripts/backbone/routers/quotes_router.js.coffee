@@ -1,7 +1,9 @@
 class BenchPrep.Routers.QuotesRouter extends Backbone.Router
   initialize: (options) ->
     @quotes = new BenchPrep.Collections.QuotesCollection()
-    @quotes.reset options.quotes
+    @startOfPage = (options.page - 1) * options.per_page
+    @endOfPage = options.page * options.per_page
+    @quotes.reset options.quotes.slice(@startOfPage, @endOfPage)
 
   routes:
     "index"    : "index"
