@@ -14,6 +14,7 @@ gem 'rails-backbone'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'rspec-mocks'
   gem 'byebug'
   gem 'pry-rails'
 end
