@@ -1,4 +1,4 @@
-class Quote < Active
+class Quote
   def self.all
     QUOTES
   end
